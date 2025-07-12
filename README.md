@@ -8,6 +8,8 @@ This project sets up a fully automated **1-tier architecture**:
 - CI/CD via GitHub Actions
 
 
+pip install -r requirements.txt
+
 ## 🔐 Step 1: Generate SSH Key (1-time only)
 
 ```
