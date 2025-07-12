@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# 1-tier-architecture
-=======
+
 # 🚀 Flask 1-Tier Architecture on AWS (Terraform + GitHub Actions)
 
 This project sets up a fully automated **1-tier architecture**:
@@ -31,4 +29,4 @@ Visit in browser:
 ```
 http://<EC2_PUBLIC_IP>:5000
 ```
->>>>>>> 3fded05 (intial commit)
+
