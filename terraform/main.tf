@@ -38,3 +38,4 @@ resource "aws_instance" "flask_ec2" {
 		name = "1-tier"
 	}
 }
+
