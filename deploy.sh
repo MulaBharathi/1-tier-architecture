@@ -1,21 +1,17 @@
 #!/bin/bash
 
+echo "🔄 Updating packages..."
+python -m pip install --upgrade pip
 
-sudo apt update -y
+echo "📦 Installing Python requirements..."
+pip install -r requirements.txt
 
+echo "🛑 Stopping existing Flask (if any)..."
+# Note: pkill may not work on Windows Git Bash; skip if needed
+taskkill //IM python.exe //F 2>nul || true
 
-sudo apt install python3-pip -y
+echo "🚀 Starting Flask app..."
+python app.py &
 
-cd ~/1-tier-architecture || exit
-
-
-pip3 install -r requirements.txt
-
-pip install gunicorn 
-
-# Kill any running Flask app
-pkill gunicorn || true
-
-# Run app with gunicorn in background
-gunicorn -w 4 -b 0.0.0.0:5000 app:app --daemon
+echo "✅ Flask app started on http://localhost:5000"
 

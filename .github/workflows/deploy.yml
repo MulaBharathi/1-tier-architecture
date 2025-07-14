@@ -25,3 +25,4 @@ jobs:
         ssh -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_PUBLIC_IP }} 'bash -s' < deploy.sh
 
 
+
